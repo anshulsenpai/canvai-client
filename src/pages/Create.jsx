@@ -14,10 +14,9 @@ const Create = () => {
     prompt: "",
     size: "small",
   });
-  console.log(inputPrompt);
 
   const [image, setImage] = useState("");
-//   console.log(process.env)
+
   const handleCreate = async () => {
     try {
       setStatus({ ...status, isFetching: true });
