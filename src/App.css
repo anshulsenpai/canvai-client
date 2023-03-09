@@ -165,6 +165,9 @@
 }
 
 @media screen and (max-width: 58.2rem) {
+  .create--container {
+    margin-top: 2rem;
+  }
   .input--prompt {
     flex-direction: column;
   }

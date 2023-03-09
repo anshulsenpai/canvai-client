@@ -1,9 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-
 const Create = () => {
-
   const [status, setStatus] = useState({
     isFetching: false,
     success: false,
@@ -18,9 +16,13 @@ const Create = () => {
   const [image, setImage] = useState("");
 
   const handleCreate = async () => {
+    // setStatus({ ...status, isFetching: false, success: false, error: false });
     try {
       setStatus({ ...status, isFetching: true });
-      const res = await axios.post('https://canvai-api.onrender.com/create', inputPrompt);
+      const res = await axios.post(
+        "https://canvai-api.onrender.com/create",
+        inputPrompt
+      );
       setImage(res.data.data);
       setStatus({ ...status, isFetching: false, success: true, error: false });
     } catch (error) {
